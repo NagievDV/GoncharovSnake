@@ -1,0 +1,22 @@
+﻿<Window x:Class="SnakeGame.ScoreboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SnakeGame"
+        mc:Ignorable="d"
+        Title="Таблица счёта:" Height="250" Width="300" Closed="Window_Closed">
+    <DataGrid Grid.Column="1" x:Name="dGridScore" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="None" VerticalAlignment="Bottom">
+        <DataGrid.Columns>
+            <DataGridTextColumn Width="282" Binding="{Binding Score}" >
+                <DataGridTextColumn.ElementStyle>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                    </Style>
+                </DataGridTextColumn.ElementStyle>
+
+            </DataGridTextColumn>
+        </DataGrid.Columns>
+
+    </DataGrid>
+</Window>
