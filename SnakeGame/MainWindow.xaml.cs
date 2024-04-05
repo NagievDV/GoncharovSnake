@@ -33,7 +33,7 @@ namespace SnakeGame
 
 
 
-        private readonly Point startingPoint = new Point(400, 250);
+        private readonly Point startingPoint = new Point(400, 50);
 
         private Point currentPosition = new Point();
 
@@ -57,7 +57,7 @@ namespace SnakeGame
             timer.Tick += new EventHandler(timer_Tick);
 
 
-            timer.Interval = TimeSpan.FromSeconds(0.003);
+            timer.Interval = TimeSpan.FromSeconds(0.002);
             timer.Start();
             
             KeyDown += new KeyEventHandler(OnButtonKeyDown);
@@ -98,7 +98,7 @@ namespace SnakeGame
         
         private void PaintBonus(int index)
         {
-            Point bonusPoint = new Point(rnd.Next(15, 765), rnd.Next(15, 465));
+            Point bonusPoint = new Point(rnd.Next(20, 760), rnd.Next(20, 460));
 
             Rectangle newRect = new Rectangle
             {
